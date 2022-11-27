@@ -1,5 +1,8 @@
 package kalantax;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author 30698
@@ -276,7 +279,12 @@ public class Artists extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void insertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Oracle.addArtist(1,"asd","sad");
+        } catch (Exception ex) {
+            Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_insertActionPerformed
 
     private void CIDInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CIDInActionPerformed

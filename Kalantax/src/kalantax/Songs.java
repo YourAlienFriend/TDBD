@@ -1,5 +1,5 @@
 package kalantax;
-
+import java.sql.*;
 /**
  *
  * @author 30698
@@ -277,6 +277,7 @@ public class Songs extends javax.swing.JFrame {
 
     private void insertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_insertActionPerformed
 
     private void TypeInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeInActionPerformed
