@@ -1,33 +1,31 @@
 CREATE TABLE Disco (
-  id   number GENERATED AS IDENTITY, 
+  id   number(10) NOT NULL, 
   name varchar2(255), 
   City varchar2(255), 
   PRIMARY KEY (id));
 CREATE TABLE Artists (
-  id    number GENERATED AS IDENTITY, 
+  id    number(10) NOT NULL, 
   name  varchar2(255), 
   "s-b" varchar2(255), 
   PRIMARY KEY (id));
 CREATE TABLE Songs (
-  id    number NOT NULL UNIQUE, 
-  Aid   number NOT NULL, 
-  Did   number NOT NULL, 
+  id    number(10) NOT NULL, 
   album varchar2(255), 
   name  varchar2(255), 
+  Did   number(10) NOT NULL, 
   genre varchar2(255), 
-  PRIMARY KEY (id, 
-  Aid, 
-  Did));
+  Aid   number(10) NOT NULL, 
+  PRIMARY KEY (id));
 CREATE TABLE recorder (
-  id      number GENERATED AS IDENTITY, 
+  id      number NOT NULL, 
   name    number, 
   phone   number, 
   address varchar2(255), 
   PRIMARY KEY (id));
 CREATE TABLE Recordings (
-  id     number NOT NULL UNIQUE, 
+  id     number(10) NOT NULL, 
   eid    number NOT NULL, 
-  sid    number NOT NULL, 
+  sid    number(10) NOT NULL, 
   "date" date, 
   PRIMARY KEY (id, 
   eid, 
