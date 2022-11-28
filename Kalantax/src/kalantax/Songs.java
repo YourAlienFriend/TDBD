@@ -66,7 +66,7 @@ public class Songs extends javax.swing.JFrame {
         jLabel4.setText("Title");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel5.setText("Type");
+        jLabel5.setText("Genre");
 
         TypeIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +103,7 @@ public class Songs extends javax.swing.JFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel11.setText("Type");
+        jLabel11.setText("Genre");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel12.setText("ID Artist");
