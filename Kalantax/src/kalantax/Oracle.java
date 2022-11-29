@@ -5,6 +5,7 @@
  */
 package kalantax;
 import java.sql.*;
+import oracle.jdbc.OracleTypes;
 /**
  *
  * @author Manolis
@@ -20,13 +21,34 @@ public class Oracle {
     static Statement  statement       = null;
     static ResultSet rs		      = null;
     
-    public static void addArtist(int aid, String name,String s_b) throws Exception{
+    public static Connection getConnection() throws ClassNotFoundException, SQLException{
         Class.forName (driverClassName);
          dbConnection = DriverManager.getConnection (url, username, passwd);
-
-        statement    = dbConnection.createStatement();
-        statement.executeUpdate("insert INTO ARTISTS (id,name,sb) VALUES ('1', 'Ghost', 'band')");
+         return dbConnection;
+        
+    }
+    public static ResultSet songsbyAlbum(String album) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        PreparedStatement  ps  = dbcon.prepareStatement("{?=CALL SONGSBYALBUM(?)}");
+        ps.setString(1,album);
+        ResultSet rs= ps.executeQuery();
+        return rs;
+        
         
         
     }
+    public static ResultSet songsbyGenre(String genre) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL SONGSBYGENRE(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,genre);
+        
+        
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+        return rs;
+    }
+    
 }

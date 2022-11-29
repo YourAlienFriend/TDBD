@@ -27,6 +27,7 @@ CREATE TABLE Recordings (
   eid    number NOT NULL, 
   sid    number(10) NOT NULL, 
   "date" date, 
+  hall   varchar2(255), 
   PRIMARY KEY (id, 
   eid, 
   sid));
