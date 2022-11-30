@@ -59,7 +59,7 @@ public class QArtists extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pop", "rock" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "solo", "band" }));
         jComboBox1.setToolTipText("");
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 

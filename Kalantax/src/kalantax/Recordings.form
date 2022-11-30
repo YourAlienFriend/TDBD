@@ -47,7 +47,7 @@
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="IDSEIn" min="-2" pref="48" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -59,7 +59,7 @@
                                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="RoomIn" min="-2" pref="46" max="-2" attributes="0"/>
+                                      <Component id="selected_hall" min="-2" pref="52" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -96,7 +96,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="26" max="32767" attributes="0"/>
+                      <EmptySpace min="44" pref="24" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -149,12 +149,14 @@
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="IDSIn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="RoomIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="DateIn" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="DateIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="selected_hall" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton1" max="32767" attributes="0"/>
@@ -250,12 +252,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="10" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Room"/>
+        <Property name="text" type="java.lang.String" value="Hall"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="DateIn">
-    </Component>
-    <Component class="javax.swing.JTextField" name="RoomIn">
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -382,6 +382,27 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReturnActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="selected_hall">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="6">
+            <StringItem index="0" value="A1"/>
+            <StringItem index="1" value="A2"/>
+            <StringItem index="2" value="B1"/>
+            <StringItem index="3" value="B2"/>
+            <StringItem index="4" value="C1"/>
+            <StringItem index="5" value="C2"/>
+          </StringArray>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
