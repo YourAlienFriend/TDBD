@@ -27,7 +27,6 @@ public class Songs extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        IDIn = new javax.swing.JTextField();
         IDArIn = new javax.swing.JTextField();
         TitleIn = new javax.swing.JTextField();
         insert = new javax.swing.JButton();
@@ -45,10 +44,11 @@ public class Songs extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         edit = new javax.swing.JButton();
         id3 = new javax.swing.JLabel();
-        IDDel = new javax.swing.JTextField();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        IDspinner1 = new javax.swing.JSpinner();
+        IDspinner2 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,8 +67,6 @@ public class Songs extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel5.setText("Genre");
-
-        IDIn.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         insert.setText("Insert");
@@ -136,6 +134,16 @@ public class Songs extends javax.swing.JFrame {
         jComboBox1.setToolTipText("");
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        IDspinner1.setToolTipText("");
+        IDspinner1.setEnabled(false);
+        IDspinner1.setFocusCycleRoot(true);
+
+        IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        IDspinner2.setToolTipText("");
+        IDspinner2.setEnabled(false);
+        IDspinner2.setFocusCycleRoot(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -159,7 +167,7 @@ public class Songs extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TypeEd)
                             .addComponent(TitleEd, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 19, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -175,9 +183,9 @@ public class Songs extends javax.swing.JFrame {
                                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(id, javax.swing.GroupLayout.Alignment.TRAILING))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(IDIn)
-                                            .addComponent(IDArIn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(IDArIn, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                            .addComponent(IDspinner1))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel5)
@@ -192,7 +200,7 @@ public class Songs extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(id3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(IDDel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(delete)
                         .addGap(32, 32, 32))))
@@ -218,7 +226,7 @@ public class Songs extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(id)
-                            .addComponent(IDIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
@@ -264,8 +272,8 @@ public class Songs extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(id3)
-                    .addComponent(IDDel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete))
+                    .addComponent(delete)
+                    .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(Return)
                 .addContainerGap())
@@ -302,9 +310,9 @@ public class Songs extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField IDArEd;
     private javax.swing.JTextField IDArIn;
-    private javax.swing.JTextField IDDel;
     private javax.swing.JTextField IDEd;
-    private javax.swing.JTextField IDIn;
+    private javax.swing.JSpinner IDspinner1;
+    private javax.swing.JSpinner IDspinner2;
     private javax.swing.JButton Return;
     private javax.swing.JTextField TitleEd;
     private javax.swing.JTextField TitleIn;

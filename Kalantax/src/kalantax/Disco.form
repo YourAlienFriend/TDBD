@@ -36,9 +36,9 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="IDIn" max="32767" attributes="0"/>
                           <Component id="NameIn" alignment="0" max="32767" attributes="0"/>
                           <Component id="CityIn" alignment="0" pref="90" max="32767" attributes="0"/>
+                          <Component id="IDspinner1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="insert" min="-2" max="-2" attributes="0"/>
@@ -78,8 +78,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="IDDel" min="-2" pref="91" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="IDspinner2" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="delete" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -99,7 +99,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="IDIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="IDspinner1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -145,8 +145,8 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="IDDel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="delete" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="IDspinner2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="Return" min="-2" max="-2" attributes="0"/>
@@ -188,8 +188,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="City"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="IDIn">
     </Component>
     <Component class="javax.swing.JTextField" name="NameIn">
     </Component>
@@ -263,8 +261,6 @@
         <Property name="text" type="java.lang.String" value="Delete an element of the table"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="IDDel">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -297,6 +293,26 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReturnActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JSpinner" name="IDspinner2">
+      <Properties>
+        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusCycleRoot" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSpinner" name="IDspinner1">
+      <Properties>
+        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusCycleRoot" type="boolean" value="true"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

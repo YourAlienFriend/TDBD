@@ -5,6 +5,8 @@
  */
 package kalantax;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oracle.jdbc.OracleTypes;
 /**
  *
@@ -52,4 +54,21 @@ public class Oracle {
         return rs;
     }
     
+    public static void addArtists(int id,String name,String sb) throws ClassNotFoundException{
+        try {
+        
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDARTISTS(?,?,?)}");
+            cs.setInt(1,id);
+            cs.setString(2,name);
+            cs.setString(3,sb);
+            cs.executeQuery();
+            cs.close();
+            dbcon.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }
 }

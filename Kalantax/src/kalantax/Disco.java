@@ -26,7 +26,6 @@ public class Disco extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        IDIn = new javax.swing.JTextField();
         NameIn = new javax.swing.JTextField();
         CityIn = new javax.swing.JTextField();
         insert = new javax.swing.JButton();
@@ -41,10 +40,11 @@ public class Disco extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        IDDel = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
+        IDspinner2 = new javax.swing.JSpinner();
+        IDspinner1 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +104,16 @@ public class Disco extends javax.swing.JFrame {
             }
         });
 
+        IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        IDspinner2.setToolTipText("");
+        IDspinner2.setEnabled(false);
+        IDspinner2.setFocusCycleRoot(true);
+
+        IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        IDspinner1.setToolTipText("");
+        IDspinner1.setEnabled(false);
+        IDspinner1.setFocusCycleRoot(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -120,9 +130,9 @@ public class Disco extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(IDIn)
                             .addComponent(NameIn)
-                            .addComponent(CityIn, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
+                            .addComponent(CityIn, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                            .addComponent(IDspinner1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(insert)
                         .addGap(27, 27, 27))
@@ -151,8 +161,8 @@ public class Disco extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IDDel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(delete)
                 .addGap(27, 27, 27))
@@ -169,7 +179,7 @@ public class Disco extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(IDIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -206,8 +216,8 @@ public class Disco extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(IDDel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete))
+                    .addComponent(delete)
+                    .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(Return)
                 .addContainerGap())
@@ -231,9 +241,9 @@ public class Disco extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CityEd;
     private javax.swing.JTextField CityIn;
-    private javax.swing.JTextField IDDel;
     private javax.swing.JTextField IDEd;
-    private javax.swing.JTextField IDIn;
+    private javax.swing.JSpinner IDspinner1;
+    private javax.swing.JSpinner IDspinner2;
     private javax.swing.JTextField NameEd;
     private javax.swing.JTextField NameIn;
     private javax.swing.JButton Return;
