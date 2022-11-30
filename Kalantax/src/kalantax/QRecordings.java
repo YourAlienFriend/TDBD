@@ -444,6 +444,21 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void resultsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton1ActionPerformed
         // TODO add your handling code here:
+                try {
+            // TODO add your handling code here:
+            String genre=jComboBox1.getSelectedItem().toString();
+
+            ResultSet rs= Oracle.songsbyGenre(genre);
+            TableModel model = resultSetToTableModel(rs);
+            results.setModel(model);
+            rs.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_resultsButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -452,6 +467,21 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void resultsButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton2ActionPerformed
         // TODO add your handling code here:
+                try {
+            // TODO add your handling code here:
+            String genre=jComboBox1.getSelectedItem().toString();
+
+            ResultSet rs= Oracle.songsbyGenre(genre);
+            TableModel model = resultSetToTableModel(rs);
+            results.setModel(model);
+            rs.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_resultsButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -460,6 +490,21 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void resultsButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton3ActionPerformed
         // TODO add your handling code here:
+                try {
+            // TODO add your handling code here:
+            String genre=jComboBox1.getSelectedItem().toString();
+
+            ResultSet rs= Oracle.songsbyGenre(genre);
+            TableModel model = resultSetToTableModel(rs);
+            results.setModel(model);
+            rs.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(QRecordings.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_resultsButton3ActionPerformed
 
 
