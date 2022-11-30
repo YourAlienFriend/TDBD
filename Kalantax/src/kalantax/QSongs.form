@@ -43,8 +43,8 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Type">
-                <Property name="tabTitle" type="java.lang.String" value="Type"/>
+              <JTabbedPaneConstraints tabName="Genre">
+                <Property name="tabTitle" type="java.lang.String" value="Genre"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -107,7 +107,7 @@
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Find the song with one of these types"/>
+                <Property name="text" type="java.lang.String" value="Find the song with one of these genres"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -115,7 +115,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="3"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Type:"/>
+                <Property name="text" type="java.lang.String" value="Genre:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">

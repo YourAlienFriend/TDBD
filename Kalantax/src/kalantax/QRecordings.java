@@ -423,9 +423,9 @@ public class QRecordings extends javax.swing.JFrame {
     private void resultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButtonActionPerformed
         try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String hall=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(hall);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -446,9 +446,9 @@ public class QRecordings extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String date=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(date);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -469,9 +469,9 @@ public class QRecordings extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String se=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(se);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -492,9 +492,9 @@ public class QRecordings extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String song=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(song);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();

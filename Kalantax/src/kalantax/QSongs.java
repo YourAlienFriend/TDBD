@@ -56,10 +56,10 @@ public class QSongs extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Find the song with one of these types");
+        jLabel1.setText("Find the song with one of these genres");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jLabel3.setText("Type:");
+        jLabel3.setText("Genre:");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Return");
@@ -135,7 +135,7 @@ public class QSongs extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jTabbedPane1.addTab("Type", jPanel1);
+        jTabbedPane1.addTab("Genre", jPanel1);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -352,9 +352,9 @@ public class QSongs extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String name=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(name);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -375,9 +375,9 @@ public class QSongs extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String genre=jComboBox1.getSelectedItem().toString();
+            String album=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(genre);
+            ResultSet rs= Oracle.songsbyGenre(album);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
