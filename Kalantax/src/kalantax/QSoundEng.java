@@ -135,9 +135,9 @@ public class QSoundEng extends javax.swing.JFrame {
     private void resultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButtonActionPerformed
         try {
             // TODO add your handling code here:
-            String city=jComboBox1.getSelectedItem().toString();
+            String name=jComboBox1.getSelectedItem().toString();
 
-            ResultSet rs= Oracle.songsbyGenre(city);
+            ResultSet rs= Oracle.songsbyGenre(name);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
