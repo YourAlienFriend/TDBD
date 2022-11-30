@@ -411,6 +411,7 @@ public class QRecordings extends javax.swing.JFrame {
         jTabbedPane1.getAccessibleContext().setAccessibleName("Type");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -440,6 +441,9 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        Questions questions = new Questions();
+        questions.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void resultsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton1ActionPerformed
@@ -463,6 +467,9 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        Questions questions = new Questions();
+        questions.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void resultsButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton2ActionPerformed
@@ -486,6 +493,9 @@ public class QRecordings extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        Questions questions = new Questions();
+        questions.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void resultsButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButton3ActionPerformed
