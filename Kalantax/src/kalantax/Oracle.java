@@ -98,6 +98,7 @@ public class Oracle {
    public static void deleteDisco(int id){
             Connection dbcon=getConnection();
             CallableStatement cs=dbcon.prepareCall("{CALL DELETEDISCO(?)}");
-            cs.setInt(1,id);
+            cs.setInt(1,id);e
+            cs.xecuteQuery();
             
 }
