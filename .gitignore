@@ -16,3 +16,7 @@ Kalantax/nbproject/genfiles.properties
 Kalantax/nbproject/private/private.properties
 Kalantax/nbproject/project.properties
 Kalantax/nbproject/project.xml
+Kalantax/nbproject/build-impl.xml
+Kalantax/nbproject/build-impl.xml
+*.xml
+*.properties

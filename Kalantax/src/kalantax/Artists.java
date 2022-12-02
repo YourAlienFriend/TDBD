@@ -46,7 +46,7 @@ public class Artists extends javax.swing.JFrame {
         id3 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
-        solobandBox = new javax.swing.JComboBox<>();
+        solobandBox =https://docs.oracle.com/pls/rdman/handle404?X_ORCL_404path=%2fen%2fjava%2fjavase%2f11%2fdocs%2fapi%2findex.htmlnetbeans%2520change%2520jdk new javax.swing.JComboBox<>();
         IDspinner1 = new javax.swing.JSpinner();
         IDspinner2 = new javax.swing.JSpinner();
 
