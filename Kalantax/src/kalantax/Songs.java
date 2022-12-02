@@ -1,5 +1,7 @@
 package kalantax;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author 30698
@@ -136,12 +138,10 @@ public class Songs extends javax.swing.JFrame {
 
         IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner1.setToolTipText("");
-        IDspinner1.setEnabled(false);
         IDspinner1.setFocusCycleRoot(true);
 
         IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner2.setToolTipText("");
-        IDspinner2.setEnabled(false);
         IDspinner2.setFocusCycleRoot(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -297,7 +297,14 @@ public class Songs extends javax.swing.JFrame {
     }//GEN-LAST:event_editActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Oracle.deleteSongs((Integer)IDspinner2.getValue());
+        } catch (SQLException ex) {
+            Logger.getLogger(Songs.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed

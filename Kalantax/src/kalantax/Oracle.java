@@ -101,9 +101,72 @@ public class Oracle {
             cs.close();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
 }
+      public static void addRecorder(int id,String name,String phone,String address){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDRECORDER(?,?,?,?)}");
+            cs.setInt(1,id);
+            cs.setString(2,name);
+            cs.setString(3,phone);
+            cs.setString(4,address);
+            cs.executeQuery();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+      }
     
+      public static void deleteRecorder(int id) throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL DELETERECORDER(?)}");
+            cs.setInt(1,id);
+            cs.executeQuery();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+       
+            
+          }
+      
+      
+       }
+      
+      
+    public static void addSongs(int id,String name,String album,String genre,int did,int aid) throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDSONGS(?,?,?,?,?,?)}");
+            cs.setInt(1,id);
+            cs.setString(2, name);
+            cs.setString(3, album);
+            cs.setString(4, genre);
+            cs.setInt(5, did);
+            cs.setInt(6,aid);
+            cs.executeQuery();
+            cs.closeOnCompletion();
+            dbcon.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    
+    public static void  deleteSongs(int id)throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL DELETESONG(?)}");
+            cs.setInt(1,id);
+            cs.executeQuery();
+            cs.closeOnCompletion();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+            
+    }
 }
 
   
