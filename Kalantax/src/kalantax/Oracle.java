@@ -103,7 +103,15 @@ public class Oracle {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
         } 
 }
-      public static void addRecorder(int id,String name,String phone,String address){
+
+    /**
+     *
+     * @param id
+     * @param name
+     * @param phone
+     * @param address
+     */
+    public static void addRecorder(int id,String name,String phone,String address){
         try {
             Connection dbcon=getConnection();
             CallableStatement cs=dbcon.prepareCall("{CALL ADDRECORDER(?,?,?,?)}");
@@ -139,7 +147,7 @@ public class Oracle {
     public static void addSongs(int id,String name,String album,String genre,int did,int aid) throws SQLException{
         try {
             Connection dbcon=getConnection();
-            CallableStatement cs=dbcon.prepareCall("{CALL ADDSONGS(?,?,?,?,?,?)}");
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDSONG(?,?,?,?,?,?)}");
             cs.setInt(1,id);
             cs.setString(2, name);
             cs.setString(3, album);
@@ -163,10 +171,16 @@ public class Oracle {
             cs.closeOnCompletion();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
-            
         }
             
     }
+    
+    
+     
+    
+    
+    
+    
 }
 
   
