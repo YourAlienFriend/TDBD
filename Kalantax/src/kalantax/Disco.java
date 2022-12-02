@@ -106,12 +106,10 @@ public class Disco extends javax.swing.JFrame {
 
         IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner2.setToolTipText("");
-        IDspinner2.setEnabled(false);
         IDspinner2.setFocusCycleRoot(true);
 
         IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner1.setToolTipText("");
-        IDspinner1.setEnabled(false);
         IDspinner1.setFocusCycleRoot(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

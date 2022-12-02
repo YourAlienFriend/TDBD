@@ -1,8 +1,10 @@
 package kalantax;
 
 import static java.lang.Integer.parseInt;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 /**
  *
@@ -46,7 +48,7 @@ public class Artists extends javax.swing.JFrame {
         id3 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
-        solobandBox =https://docs.oracle.com/pls/rdman/handle404?X_ORCL_404path=%2fen%2fjava%2fjavase%2f11%2fdocs%2fapi%2findex.htmlnetbeans%2520change%2520jdk new javax.swing.JComboBox<>();
+        solobandBox = new javax.swing.JComboBox<>();
         IDspinner1 = new javax.swing.JSpinner();
         IDspinner2 = new javax.swing.JSpinner();
 
@@ -249,16 +251,22 @@ public class Artists extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void insertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertActionPerformed
-        int id =(Integer)IDspinner1.getValue();
-        String fullname=NameIn.getText();
-        String soloband=solobandBox.getSelectedItem().toString();
         try {
+            int id =(Integer)IDspinner1.getValue();
+            String fullname=NameIn.getText();
+            String soloband=solobandBox.getSelectedItem().toString();
+            
             // TODO add your handling code here:
             
-          Oracle.addArtists(id,fullname,soloband);
-        } catch (Exception ex) {
+            Oracle.addArtists(id,fullname,soloband);
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+             ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
         }
+        
     }//GEN-LAST:event_insertActionPerformed
 
     private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
@@ -267,6 +275,16 @@ public class Artists extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        int id =(Integer)IDspinner2.getValue();
+        try {
+            Oracle.deleteArtist(id);
+        } catch (SQLException ex) {
+            Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed

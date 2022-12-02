@@ -54,8 +54,8 @@ public class Oracle {
         return rs;
     }
     
-    public static void addArtists(int id,String name,String sb) throws ClassNotFoundException{
-        try {
+    public static void addArtists(int id,String name,String sb) throws ClassNotFoundException, SQLException{
+        
         
             Connection dbcon=getConnection();
             CallableStatement cs=dbcon.prepareCall("{CALL ADDARTISTS(?,?,?)}");
@@ -65,10 +65,31 @@ public class Oracle {
             cs.executeQuery();
             cs.close();
             dbcon.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     
         
         
     }
+    public static void deleteArtist(int id) throws SQLException, ClassNotFoundException{
+        Connection dbcon=getConnection();
+        CallableStatement cs=dbcon.prepareCall("{CALL DELETEARTIST(?)}");
+        cs.setInt(1, id);
+        cs.executeQuery();
+        cs.close();
+        
+    }
+    
+    public static void addDisco(int id,String name,String city){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDDISCO(?,?,?)}");
+            cs.setInt(1,id);
+            cs.setString(2, name);
+            cs.setString(3, city);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 }
