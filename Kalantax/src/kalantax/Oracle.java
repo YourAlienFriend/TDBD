@@ -92,13 +92,18 @@ public class Oracle {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+     public static void deleteDisco(int id) throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL DELETEDISCO(?)}");
+            cs.setInt(1,id);
+            cs.executeQuery();
+            cs.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+}
     
 }
 
-   public static void deleteDisco(int id){
-            Connection dbcon=getConnection();
-            CallableStatement cs=dbcon.prepareCall("{CALL DELETEDISCO(?)}");
-            cs.setInt(1,id);e
-            cs.xecuteQuery();
-            
-}
+  
