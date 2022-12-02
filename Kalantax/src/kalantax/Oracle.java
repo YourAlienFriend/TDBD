@@ -32,8 +32,8 @@ public class Oracle {
     public static ResultSet songsbyAlbum(String album) throws SQLException, ClassNotFoundException{
         
         Connection dbcon =getConnection();
-        PreparedStatement  ps  = dbcon.prepareStatement("{?=CALL SONGSBYALBUM(?)}");
-        ps.setString(1,album);
+        PreparedStatement  ps  = dbcon.prepareStatement("{?=CALL SONGSBYALBUM(?,?)}");
+        ps.setString(2,album);
         ResultSet rs= ps.executeQuery();
         return rs;
         
@@ -85,6 +85,7 @@ public class Oracle {
             cs.setInt(1,id);
             cs.setString(2, name);
             cs.setString(3, city);
+            cs.executeQuery();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -92,4 +93,11 @@ public class Oracle {
         }
     }
     
+}
+
+   public static void deleteDisco(int id){
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL DELETEDISCO(?)}");
+            cs.setInt(1,id);
+            
 }
