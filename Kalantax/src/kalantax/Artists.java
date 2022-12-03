@@ -66,7 +66,7 @@ public class Artists extends javax.swing.JFrame {
         jLabel4.setText("Solo/Band");
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        insert.setText("Insert");
+        insert.setText("Insert/Edit");
         insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 insertActionPerformed(evt);

@@ -75,7 +75,7 @@ public class Songs extends javax.swing.JFrame {
         });
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        insert.setText("Insert");
+        insert.setText("Insert/Edit");
         insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 insertActionPerformed(evt);
@@ -202,11 +202,11 @@ public class Songs extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(insert)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(log)
                                 .addGap(18, 18, 18)
-                                .addComponent(Return)))))
+                                .addComponent(Return))
+                            .addComponent(insert, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
