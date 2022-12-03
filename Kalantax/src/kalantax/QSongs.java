@@ -368,7 +368,7 @@ public class QSongs extends javax.swing.JFrame {
 
             ResultSet rs= Oracle.songsbyName(name);
             TableModel model = resultSetToTableModel(rs);
-            results.setModel(model);
+            results1.setModel(model);
             rs.close();
 
         } catch (SQLException ex) {
@@ -394,7 +394,7 @@ public class QSongs extends javax.swing.JFrame {
 
             ResultSet rs= Oracle.songsbyAlbum(album);
             TableModel model = resultSetToTableModel(rs);
-            results.setModel(model);
+            results2.setModel(model);
             rs.close();
 
         } catch (SQLException ex) {
@@ -411,6 +411,7 @@ public class QSongs extends javax.swing.JFrame {
 
     private void input_albumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_albumActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_input_albumActionPerformed
 
 

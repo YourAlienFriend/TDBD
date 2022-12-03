@@ -32,9 +32,13 @@ public class Oracle {
     public static ResultSet songsbyAlbum(String album) throws SQLException, ClassNotFoundException{
         
         Connection dbcon =getConnection();
-        PreparedStatement  ps  = dbcon.prepareStatement("{?=CALL SONGSBYALBUM(?,?)}");
-        ps.setString(2,album);
-        ResultSet rs= ps.executeQuery();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL SONGSBYALBUM(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,album);
+      
+        cs.executeQuery();
+        
+        ResultSet rs=(ResultSet) cs.getObject(1);
         return rs;
         
         

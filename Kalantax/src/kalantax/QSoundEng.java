@@ -132,11 +132,11 @@ public class QSoundEng extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void resultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultsButtonActionPerformed
-      /* try {
+     try {
             // TODO add your handling code here:
-           /* String name=jComboBox1.getSelectedItem().toString();
+            String name=input_recorder.getText();
 
-            ResultSet rs= Oracle.songsbyGenre(name);
+            ResultSet rs= Oracle.recordersByNames(name);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -146,7 +146,7 @@ public class QSoundEng extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(QSoundEng.class.getName()).log(Level.SEVERE, null, ex);
         }
-    */
+    
     }//GEN-LAST:event_resultsButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
