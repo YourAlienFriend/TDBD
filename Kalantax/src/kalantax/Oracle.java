@@ -180,9 +180,7 @@ public class Oracle {
             cs.setString(2, name);
             cs.setString(3, city);
             cs.executeQuery();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -295,9 +293,13 @@ public class Oracle {
             cs.closeOnCompletion();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+          //  patatakia
         }
+        
             
     }
+    
+    
     
     
      
