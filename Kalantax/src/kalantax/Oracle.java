@@ -299,10 +299,91 @@ public class Oracle {
             
     }
     
+    public static ResultSet showlogRecorder(){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL SHOWLOGRECORDER(?)}");
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.executeQuery();
+            ResultSet rs=(ResultSet)cs.getObject(1);
+            return rs;
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+            
+            
+    }
     
     
-    
+     public static ResultSet showlogArtists(){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL SHOWLOGARTISTS(?)}");
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.executeQuery();
+            ResultSet rs=(ResultSet)cs.getObject(1);
+            return rs;
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+             
+    }
      
+    public static ResultSet showlogDisco(){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL SHOWLOGDISCO(?)}");
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.executeQuery();
+            ResultSet rs=(ResultSet)cs.getObject(1);
+            return rs;
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+             return null;
+        }
+            
+            
+    }
+    
+    
+    public static ResultSet showlogRecordings(){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL SHOWLOGRECORDINGS(?)}");
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.executeQuery();
+            ResultSet rs=(ResultSet)cs.getObject(1);
+            return rs;
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+              return null;
+        }
+          
+            
+    } 
+    
+    public static ResultSet showlogSongs(){
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL SHOWLOGSONGS(?)}");
+            cs.registerOutParameter(1, OracleTypes.CURSOR);
+            cs.executeQuery();
+            ResultSet rs=(ResultSet)cs.getObject(1);
+            return rs;
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+            
+            
+    } 
     
     
     
