@@ -293,7 +293,7 @@ public class Oracle {
             cs.closeOnCompletion();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
-          //  patatakia
+       
         }
         
             
