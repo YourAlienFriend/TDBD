@@ -54,8 +54,6 @@ public class Recordings extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         IDEd = new javax.swing.JTextField();
-        IDSEEd = new javax.swing.JTextField();
-        IDSEd = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         RoomEd = new javax.swing.JTextField();
@@ -63,10 +61,12 @@ public class Recordings extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
-        selected_hall = new javax.swing.JComboBox<String>();
+        selected_hall = new javax.swing.JComboBox<>();
         IDspinner1 = new javax.swing.JSpinner();
         IDspinner2 = new javax.swing.JSpinner();
         jSpinner1 = new javax.swing.JSpinner();
+        sidin = new javax.swing.JSpinner();
+        ridin = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,22 +148,28 @@ public class Recordings extends javax.swing.JFrame {
             }
         });
 
-        selected_hall.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "A1", "A2", "B1", "B2", "C1", "C2" }));
+        selected_hall.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "B1", "B2", "C1", "C2" }));
         selected_hall.setToolTipText("");
         selected_hall.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner1.setToolTipText("");
-        IDspinner1.setEnabled(false);
         IDspinner1.setFocusCycleRoot(true);
 
         IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner2.setToolTipText("");
-        IDspinner2.setEnabled(false);
         IDspinner2.setFocusCycleRoot(true);
 
         jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1669847156162L), null, null, java.util.Calendar.DAY_OF_WEEK));
         jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        sidin.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        sidin.setToolTipText("");
+        sidin.setFocusCycleRoot(true);
+
+        ridin.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        ridin.setToolTipText("");
+        ridin.setFocusCycleRoot(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,8 +191,12 @@ public class Recordings extends javax.swing.JFrame {
                                         .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel3)
-                                        .addGap(60, 60, 60)
-                                        .addComponent(jLabel4))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ridin, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(sidin, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -206,12 +216,8 @@ public class Recordings extends javax.swing.JFrame {
                                         .addComponent(jLabel15)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(IDSEEd, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(IDSEd, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(60, 60, 60)
+                                        .addComponent(jLabel16))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
                                         .addComponent(jLabel18)
@@ -254,7 +260,9 @@ public class Recordings extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
-                    .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sidin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ridin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,9 +281,7 @@ public class Recordings extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(IDEd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15)
-                    .addComponent(IDSEEd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(IDSEd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
@@ -328,10 +334,10 @@ public class Recordings extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             int id =(Integer)IDspinner1.getValue();
-            int rid = (Integer)IDSEIn.getValue(); 
-            int sid = (Integer)IDSIn.getValue(); 
+            int rid = (Integer)ridin.getValue(); 
+            int sid = (Integer)sidin.getValue(); 
             String rdate = jSpinner1.getValue().toString();
-            String hall= selectedhall.getSelectedItem().toString();
+            String hall= selected_hall.getSelectedItem().toString();
             
             // TODO add your handling code here:
             
@@ -345,8 +351,6 @@ public class Recordings extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField IDEd;
-    private javax.swing.JTextField IDSEEd;
-    private javax.swing.JTextField IDSEd;
     private javax.swing.JSpinner IDspinner1;
     private javax.swing.JSpinner IDspinner2;
     private javax.swing.JButton Insert;
@@ -371,6 +375,8 @@ public class Recordings extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner ridin;
     private javax.swing.JComboBox<String> selected_hall;
+    private javax.swing.JSpinner sidin;
     // End of variables declaration//GEN-END:variables
 }

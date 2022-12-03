@@ -172,7 +172,7 @@ public class Oracle {
         
     }
     
-    public static void addDisco(int id,String name,String city){
+    public static void addDisco(int id,String name,String city) throws SQLException{
         try {
             Connection dbcon=getConnection();
             CallableStatement cs=dbcon.prepareCall("{CALL ADDDISCO(?,?,?)}");
@@ -180,7 +180,7 @@ public class Oracle {
             cs.setString(2, name);
             cs.setString(3, city);
             cs.executeQuery();
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
