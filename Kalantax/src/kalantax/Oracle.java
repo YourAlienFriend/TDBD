@@ -175,6 +175,36 @@ public class Oracle {
             
     }
     
+        public static void addRecordings(int id,int rid,int sid,String rdate,String hall) throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL ADDRECORDINGS(?,?,?,?,?)}");
+            cs.setInt(1,id);
+            cs.setInt(2, rid);
+            cs.setInt(3, sid);
+            cs.setString(4, rdate);
+            cs.setString(5, hall);
+            cs.executeQuery();
+            cs.closeOnCompletion();
+            dbcon.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    
+    public static void  deleteRecordings(int id)throws SQLException{
+        try {
+            Connection dbcon=getConnection();
+            CallableStatement cs=dbcon.prepareCall("{CALL DELETERECORDINGS(?)}");
+            cs.setInt(1,id);
+            cs.executeQuery();
+            cs.closeOnCompletion();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Oracle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+    
     
      
     
