@@ -364,9 +364,9 @@ public class QSongs extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String name=jComboBox1.getSelectedItem().toString();
+            String name=input_name.getText();
 
-            ResultSet rs= Oracle.songsbyGenre(name);
+            ResultSet rs= Oracle.songsbyName(name);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
@@ -390,9 +390,9 @@ public class QSongs extends javax.swing.JFrame {
         // TODO add your handling code here:
                 try {
             // TODO add your handling code here:
-            String album=jComboBox1.getSelectedItem().toString();
+            String album=input_album.getText();
 
-            ResultSet rs= Oracle.songsbyGenre(album);
+            ResultSet rs= Oracle.songsbyAlbum(album);
             TableModel model = resultSetToTableModel(rs);
             results.setModel(model);
             rs.close();
