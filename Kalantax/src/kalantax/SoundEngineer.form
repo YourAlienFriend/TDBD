@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -54,7 +54,7 @@
                                   <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="CityIn" min="-2" pref="164" max="-2" attributes="0"/>
+                                      <Component id="AddressIn" min="-2" pref="164" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -112,7 +112,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CityIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="AddressIn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="IDspinner1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -204,9 +204,9 @@
     </Component>
     <Component class="javax.swing.JTextField" name="nameIn">
     </Component>
-    <Component class="javax.swing.JTextField" name="CityIn">
+    <Component class="javax.swing.JTextField" name="AddressIn">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CityInActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddressInActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="insert">
@@ -216,6 +216,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insertActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>

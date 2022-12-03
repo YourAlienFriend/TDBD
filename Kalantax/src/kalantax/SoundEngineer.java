@@ -1,5 +1,9 @@
 package kalantax;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author 30698
@@ -27,7 +31,7 @@ public class SoundEngineer extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         age = new javax.swing.JLabel();
         nameIn = new javax.swing.JTextField();
-        CityIn = new javax.swing.JTextField();
+        AddressIn = new javax.swing.JTextField();
         insert = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -63,14 +67,19 @@ public class SoundEngineer extends javax.swing.JFrame {
         age.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         age.setText("Phone");
 
-        CityIn.addActionListener(new java.awt.event.ActionListener() {
+        AddressIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CityInActionPerformed(evt);
+                AddressInActionPerformed(evt);
             }
         });
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         insert.setText("Insert");
+        insert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insertActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel5.setText("ID");
@@ -163,7 +172,7 @@ public class SoundEngineer extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(37, 37, 37)
-                                        .addComponent(CityIn, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(AddressIn, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(16, 16, 16)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -206,7 +215,7 @@ public class SoundEngineer extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(CityIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddressIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,6 +266,15 @@ public class SoundEngineer extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        int id =(Integer)IDspinner1.getValue();
+        try {
+            // TODO add your handling code here:
+            Oracle.deleteRecorder((Integer)IDspinner1.getValue());
+        } catch (SQLException ex) {
+            Logger.getLogger(SoundEngineer.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
@@ -266,17 +284,38 @@ public class SoundEngineer extends javax.swing.JFrame {
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 
-    private void CityInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CityInActionPerformed
+    private void AddressInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddressInActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CityInActionPerformed
+    }//GEN-LAST:event_AddressInActionPerformed
 
     private void PhoneInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhoneInActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PhoneInActionPerformed
 
+    private void insertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertActionPerformed
+        // TODO add your handling code here:
+                try {
+            int id =(Integer)IDspinner1.getValue();
+            String name=nameIn.getText();
+            String address=AddressIn.getText();
+            String phone=PhoneIn.getText();
+            
+            
+            // TODO add your handling code here:
+            
+            Oracle.addRecorder(id,name,address, phone);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(SoundEngineer.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(SoundEngineer.class.getName()).log(Level.SEVERE, null, ex);
+             ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
+    }//GEN-LAST:event_insertActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AddressIn;
     private javax.swing.JTextField CityEd;
-    private javax.swing.JTextField CityIn;
     private javax.swing.JSpinner IDspinner1;
     private javax.swing.JSpinner IDspinner2;
     private javax.swing.JTextField IdEd;

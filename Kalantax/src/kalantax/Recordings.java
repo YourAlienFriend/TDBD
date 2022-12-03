@@ -4,9 +4,12 @@ package kalantax;
  *
  * @author Manolis,Vasilis
  */
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JSpinner;
 public class Recordings extends javax.swing.JFrame {
     private SimpleDateFormat format;
@@ -40,8 +43,6 @@ public class Recordings extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        IDSEIn = new javax.swing.JTextField();
-        IDSIn = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Insert = new javax.swing.JButton();
@@ -62,7 +63,7 @@ public class Recordings extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         Return = new javax.swing.JButton();
-        selected_hall = new javax.swing.JComboBox<>();
+        selected_hall = new javax.swing.JComboBox<String>();
         IDspinner1 = new javax.swing.JSpinner();
         IDspinner2 = new javax.swing.JSpinner();
         jSpinner1 = new javax.swing.JSpinner();
@@ -90,6 +91,11 @@ public class Recordings extends javax.swing.JFrame {
 
         Insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Insert.setText("Insert");
+        Insert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertActionPerformed(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -142,7 +148,7 @@ public class Recordings extends javax.swing.JFrame {
             }
         });
 
-        selected_hall.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "B1", "B2", "C1", "C2" }));
+        selected_hall.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "A1", "A2", "B1", "B2", "C1", "C2" }));
         selected_hall.setToolTipText("");
         selected_hall.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -179,12 +185,8 @@ public class Recordings extends javax.swing.JFrame {
                                         .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(IDSEIn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(IDSIn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(60, 60, 60)
+                                        .addComponent(jLabel4))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -251,9 +253,7 @@ public class Recordings extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(IDSEIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(IDSIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IDspinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,6 +307,14 @@ public class Recordings extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        int id =(Integer)IDspinner2.getValue();
+        try {
+            Oracle.deleteRecordings(id);
+        } catch (SQLException ex) {
+            Logger.getLogger(Recordings.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
@@ -316,12 +324,29 @@ public class Recordings extends javax.swing.JFrame {
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 
+    private void InsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertActionPerformed
+        // TODO add your handling code here:
+                try {
+            int id =(Integer)IDspinner1.getValue();
+            int rid = (Integer)IDSEIn.getValue(); 
+            int sid = (Integer)IDSIn.getValue(); 
+            String rdate = jSpinner1.getValue().toString();
+            String hall= selectedhall.getSelectedItem().toString();
+            
+            // TODO add your handling code here:
+            
+            Oracle.addRecordings(id, rid, sid, rdate, hall);
+        } catch (SQLException ex) {
+            Logger.getLogger(Recordings.class.getName()).log(Level.SEVERE, null, ex);
+             ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
+    }//GEN-LAST:event_InsertActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField IDEd;
     private javax.swing.JTextField IDSEEd;
-    private javax.swing.JTextField IDSEIn;
     private javax.swing.JTextField IDSEd;
-    private javax.swing.JTextField IDSIn;
     private javax.swing.JSpinner IDspinner1;
     private javax.swing.JSpinner IDspinner2;
     private javax.swing.JButton Insert;

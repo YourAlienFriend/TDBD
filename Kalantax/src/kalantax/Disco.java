@@ -67,6 +67,11 @@ public class Disco extends javax.swing.JFrame {
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         insert.setText("Insert");
+        insert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insertActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel5.setText("ID");
@@ -246,6 +251,23 @@ public class Disco extends javax.swing.JFrame {
         Menu menu = new Menu();
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
+
+    private void insertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertActionPerformed
+        // TODO add your handling code here:
+                        try {
+            int id =(Integer)IDspinner1.getValue();
+            String name = NameIn.getText();
+            String city= CityIn.getText();
+            
+            // TODO add your handling code here:
+            
+            Oracle.addDisco(id, name, city);
+        } catch (SQLException ex) {
+            Logger.getLogger(Recordings.class.getName()).log(Level.SEVERE, null, ex);
+             ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
+        }
+    }//GEN-LAST:event_insertActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CityEd;
