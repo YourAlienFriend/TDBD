@@ -45,9 +45,103 @@ public class Oracle {
         Connection dbcon =getConnection();
         CallableStatement  cs  = dbcon.prepareCall("{CALL SONGSBYGENRE(?,?)}");
         cs.registerOutParameter(1, OracleTypes.CURSOR);
-        cs.setString(2,genre);
+        cs.setString(2,genre);               
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+        public static ResultSet songsbyName(String name) throws SQLException, ClassNotFoundException{
         
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL SONGSBYNAME(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,name);     
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet discoByCities(String city) throws SQLException, ClassNotFoundException{
         
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL DISCOBYCITIES(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,city);      
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet artistsBySB(String sb) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL ARTISTSBYSB(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,sb);
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet recordersByNames(String name) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL RECORDERSBYNAMES(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,name);     
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+      
+    public static ResultSet recordingsByDates(String rdate) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL RECORDINGSBYDATES(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,rdate);       
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet recordingsByHalls(String hall) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL RECORDINGSBYHALLS(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,hall);
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet recordingsByRecorders(String recorder_name) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL RECORDINGSBYRECORDERS(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,recorder_name);       
+        cs.executeQuery();
+        ResultSet rs= (ResultSet)cs.getObject(1);
+       
+        return rs;
+    }
+    
+    public static ResultSet recordingsBySongs(String song_name) throws SQLException, ClassNotFoundException{
+        
+        Connection dbcon =getConnection();
+        CallableStatement  cs  = dbcon.prepareCall("{CALL RECORDINGSBYSONGS(?,?)}");
+        cs.registerOutParameter(1, OracleTypes.CURSOR);
+        cs.setString(2,song_name);       
         cs.executeQuery();
         ResultSet rs= (ResultSet)cs.getObject(1);
        
