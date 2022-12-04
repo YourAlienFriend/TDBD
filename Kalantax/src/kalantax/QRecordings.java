@@ -30,6 +30,7 @@ public class QRecordings extends javax.swing.JFrame {
         
         java.util.Date date=cal.getTime();
         jSpinner1.setValue(date);
+        this.setTitle("Kalantax");
         
     }
 
@@ -78,14 +79,19 @@ public class QRecordings extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTabbedPane1.setForeground(java.awt.Color.magenta);
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Find the song with one of these halls");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("Hall:");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(java.awt.Color.magenta);
         jButton1.setText("Return");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +99,7 @@ public class QRecordings extends javax.swing.JFrame {
             }
         });
 
+        resultsButton.setForeground(java.awt.Color.magenta);
         resultsButton.setText("Enter");
         resultsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,13 +168,16 @@ public class QRecordings extends javax.swing.JFrame {
         jTabbedPane1.addTab("Hall", jPanel1);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(java.awt.Color.cyan);
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Find the recording with one of these sound engineers");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 255));
         jLabel6.setText("S.E.:");
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton3.setForeground(java.awt.Color.magenta);
         jButton3.setText("Return");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +185,7 @@ public class QRecordings extends javax.swing.JFrame {
             }
         });
 
+        resultsButton2.setForeground(java.awt.Color.magenta);
         resultsButton2.setText("Enter");
         resultsButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,13 +252,16 @@ public class QRecordings extends javax.swing.JFrame {
         jTabbedPane1.addTab("Sound Engineering", jPanel3);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(java.awt.Color.cyan);
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Find the recording with one of these songs");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 153, 255));
         jLabel8.setText("Song:");
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton4.setForeground(java.awt.Color.magenta);
         jButton4.setText("Return");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,6 +269,7 @@ public class QRecordings extends javax.swing.JFrame {
             }
         });
 
+        resultsButton3.setForeground(java.awt.Color.magenta);
         resultsButton3.setText("Enter");
         resultsButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,13 +336,16 @@ public class QRecordings extends javax.swing.JFrame {
         jTabbedPane1.addTab("Song", jPanel4);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.cyan);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Find the recording with one of these dates");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("Date:");
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(java.awt.Color.magenta);
         jButton2.setText("Return");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,6 +356,7 @@ public class QRecordings extends javax.swing.JFrame {
         jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1669847156162L), null, null, java.util.Calendar.DAY_OF_WEEK));
         jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        resultsButton1.setForeground(java.awt.Color.magenta);
         resultsButton1.setText("Enter");
         resultsButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -20,6 +20,7 @@ public class Artists extends javax.swing.JFrame {
      */
     public Artists() {
         initComponents();
+        this.setTitle("Kalantax-Edit Artists");
     }
 
     /**
@@ -51,21 +52,27 @@ public class Artists extends javax.swing.JFrame {
         log = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert the details of an artist");
 
         id.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        id.setForeground(new java.awt.Color(153, 153, 255));
         id.setText("ID");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("Name");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("Solo/Band");
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        insert.setForeground(java.awt.Color.magenta);
         insert.setText("Insert/Edit");
         insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,22 +81,26 @@ public class Artists extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel9.setForeground(java.awt.Color.cyan);
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Delete an element of the table");
 
         id3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        id3.setForeground(new java.awt.Color(153, 153, 255));
         id3.setText("ID");
 
         delete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        delete.setForeground(java.awt.Color.magenta);
         delete.setText("Delete");
+        delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
             }
         });
 
-        Return.setBackground(new java.awt.Color(153, 255, 255));
         Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return.setForeground(java.awt.Color.magenta);
         Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,16 +108,19 @@ public class Artists extends javax.swing.JFrame {
             }
         });
 
+        solobandBox.setForeground(java.awt.Color.magenta);
         solobandBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "solo", "band" }));
         solobandBox.setToolTipText("");
-        solobandBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        solobandBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         IDspinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner1.setToolTipText("");
+        IDspinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IDspinner1.setFocusCycleRoot(true);
 
         IDspinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         IDspinner2.setToolTipText("");
+        IDspinner2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IDspinner2.setFocusCycleRoot(true);
 
         jScrollPane1.setEnabled(false);
@@ -124,8 +138,8 @@ public class Artists extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(results);
 
-        log.setBackground(new java.awt.Color(153, 255, 255));
         log.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        log.setForeground(java.awt.Color.magenta);
         log.setText("Show log");
         log.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,9 +168,7 @@ public class Artists extends javax.swing.JFrame {
                                 .addComponent(insert))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addComponent(jLabel3)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(id)
                                         .addGap(21, 21, 21)))

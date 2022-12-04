@@ -18,6 +18,7 @@ public class SoundEngineer extends javax.swing.JFrame {
      */
     public SoundEngineer() {
         initComponents();
+        this.setTitle("Kalantax-Edit Sound Engineers");
     }
 
     /**

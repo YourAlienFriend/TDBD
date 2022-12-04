@@ -28,6 +28,7 @@ public class MAIN extends javax.swing.JFrame {
      */
     public MAIN() {
         initComponents();
+        this.setLocationRelativeTo(null);
          BufferedImage alert = null;
         try {
             alert = ImageIO.read(new File("src/kalantax/images/music-industry.png"));
@@ -39,6 +40,7 @@ public class MAIN extends javax.swing.JFrame {
         
         ImageIcon imageIcon = new ImageIcon(dimg);
         jLabel1.setIcon(imageIcon);
+        this.setTitle("Kalantax");
         
     }
     public static void main(String args[]) {

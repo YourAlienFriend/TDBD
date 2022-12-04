@@ -15,6 +15,7 @@ public class QDisco extends javax.swing.JFrame {
      */
     public QDisco() {
         initComponents();
+        this.setTitle("Kalantax-Search Discographic labels");
     }
 
     /**
@@ -38,13 +39,16 @@ public class QDisco extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Find the disco with one of these cities");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("City:");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(java.awt.Color.magenta);
         jButton1.setText("Return");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +56,7 @@ public class QDisco extends javax.swing.JFrame {
             }
         });
 
+        resultsButton.setForeground(java.awt.Color.magenta);
         resultsButton.setText("Enter");
         resultsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

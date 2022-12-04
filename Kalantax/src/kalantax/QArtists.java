@@ -15,6 +15,7 @@ public class QArtists extends javax.swing.JFrame {
      */
     public QArtists() {
         initComponents();
+        this.setTitle("Kalantax-Search Artists");
     }
 
     /**
@@ -38,13 +39,16 @@ public class QArtists extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Search for artists by their band status");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("Solo/Band:");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(java.awt.Color.magenta);
         jButton1.setText("Return");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +56,7 @@ public class QArtists extends javax.swing.JFrame {
             }
         });
 
+        resultsButton.setForeground(java.awt.Color.magenta);
         resultsButton.setText("Enter");
         resultsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +64,7 @@ public class QArtists extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setForeground(java.awt.Color.magenta);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "solo", "band" }));
         jComboBox1.setToolTipText("");
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

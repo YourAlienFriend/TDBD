@@ -31,6 +31,7 @@ public class Recordings extends javax.swing.JFrame {
         
         Date date=cal.getTime();
         jSpinner1.setValue(date);
+        this.setTitle("Kalantax-Edit Recordings");
     }
 
     /**

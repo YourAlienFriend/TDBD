@@ -13,6 +13,7 @@ public class InsertEdit extends javax.swing.JFrame {
         
     public InsertEdit() {
         initComponents();
+        this.setTitle("Kalantax-Edit");
     }
     
     

@@ -15,6 +15,7 @@ public class QSoundEng extends javax.swing.JFrame {
      */
     public QSoundEng() {
         initComponents();
+        this.setTitle("Kalantax");
     }
 
     /**

@@ -15,6 +15,7 @@ public class Songs extends javax.swing.JFrame {
      */
     public Songs() {
         initComponents();
+        this.setTitle("Kalantax-Edit Songs");
     }
 
     /**
