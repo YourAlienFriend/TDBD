@@ -285,7 +285,7 @@ public class Songs extends javax.swing.JFrame {
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Menu menu = new Menu();
+        InsertEdit menu = new InsertEdit();
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 

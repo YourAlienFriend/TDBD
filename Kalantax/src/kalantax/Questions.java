@@ -7,7 +7,7 @@ package kalantax;
 public class Questions extends javax.swing.JFrame {
 
     /**
-     * Creates new form Menu
+     * Creates new form InsertEdit
      */
     public Questions() {
         initComponents();
@@ -31,16 +31,20 @@ public class Questions extends javax.swing.JFrame {
         recordings = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         Return = new javax.swing.JButton();
+        Return1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.cyan);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Select a table to search");
 
-        panel1.setBackground(new java.awt.Color(255, 255, 51));
+        panel1.setBackground(getBackground());
+        panel1.setForeground(java.awt.Color.magenta);
 
         First.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        First.setForeground(java.awt.Color.magenta);
         First.setText("Record Company");
         First.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,6 +53,7 @@ public class Questions extends javax.swing.JFrame {
         });
 
         artists.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        artists.setForeground(java.awt.Color.magenta);
         artists.setText("Artists");
         artists.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +62,7 @@ public class Questions extends javax.swing.JFrame {
         });
 
         songs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        songs.setForeground(java.awt.Color.magenta);
         songs.setText("Songs");
         songs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +71,7 @@ public class Questions extends javax.swing.JFrame {
         });
 
         soundrecorder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        soundrecorder.setForeground(java.awt.Color.magenta);
         soundrecorder.setText("Sound Engineer");
         soundrecorder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +80,7 @@ public class Questions extends javax.swing.JFrame {
         });
 
         recordings.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        recordings.setForeground(java.awt.Color.magenta);
         recordings.setText("Sound Recordings");
         recordings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,10 +115,20 @@ public class Questions extends javax.swing.JFrame {
         );
 
         Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Return.setText("Return");
+        Return.setForeground(java.awt.Color.magenta);
+        Return.setText("Edit");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReturnActionPerformed(evt);
+            }
+        });
+
+        Return1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return1.setForeground(java.awt.Color.magenta);
+        Return1.setText("Return");
+        Return1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Return1ActionPerformed(evt);
             }
         });
 
@@ -121,18 +139,20 @@ public class Questions extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Return1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -144,9 +164,11 @@ public class Questions extends javax.swing.JFrame {
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addComponent(Return)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Return)
+                    .addComponent(Return1))
+                .addGap(17, 17, 17))
         );
 
         pack();
@@ -191,14 +213,22 @@ public class Questions extends javax.swing.JFrame {
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Menu menu = new Menu();
+        InsertEdit menu = new InsertEdit();
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
+
+    private void Return1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        MAIN menu = new MAIN();
+        menu.setVisible(true);
+    }//GEN-LAST:event_Return1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton First;
     private javax.swing.JButton Return;
+    private javax.swing.JButton Return1;
     private javax.swing.JButton artists;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel2;

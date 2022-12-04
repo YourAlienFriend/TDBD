@@ -255,13 +255,15 @@ public class Artists extends javax.swing.JFrame {
             dialog.setVisible(true);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Artists.class.getName()).log(Level.SEVERE, null, ex);
+             ExceptionDialog dialog=new ExceptionDialog(this,true,ex);
+            dialog.setVisible(true);
         }
     }//GEN-LAST:event_deleteActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Menu menu = new Menu();
+        InsertEdit menu = new InsertEdit();
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 
