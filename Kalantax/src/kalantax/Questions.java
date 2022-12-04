@@ -109,31 +109,31 @@ public class Questions extends javax.swing.JFrame {
             }
         });
 
-        company.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/company-construction-32.png"))); // NOI18N
+        company.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/company-construction-32.png"))); // NOI18N
         company.setText("jLabel1");
         company.setMaximumSize(new java.awt.Dimension(32, 32));
         company.setMinimumSize(new java.awt.Dimension(32, 32));
         company.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        Artist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/music-276-32.png"))); // NOI18N
+        Artist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/music-276-32.png"))); // NOI18N
         Artist.setText("jLabel1");
         Artist.setMaximumSize(new java.awt.Dimension(32, 32));
         Artist.setMinimumSize(new java.awt.Dimension(32, 32));
         Artist.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        song.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/guitar-25-32.png"))); // NOI18N
+        song.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guitar-25-32.png"))); // NOI18N
         song.setText("jLabel1");
         song.setMaximumSize(new java.awt.Dimension(32, 32));
         song.setMinimumSize(new java.awt.Dimension(32, 32));
         song.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        mic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/microphone-154-32.png"))); // NOI18N
+        mic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/microphone-154-32.png"))); // NOI18N
         mic.setText("jLabel1");
         mic.setMaximumSize(new java.awt.Dimension(32, 32));
         mic.setMinimumSize(new java.awt.Dimension(32, 32));
         mic.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        engineer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/responsible-person-selection-32.png"))); // NOI18N
+        engineer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/responsible-person-selection-32.png"))); // NOI18N
         engineer.setText("jLabel1");
         engineer.setMaximumSize(new java.awt.Dimension(32, 32));
         engineer.setMinimumSize(new java.awt.Dimension(32, 32));

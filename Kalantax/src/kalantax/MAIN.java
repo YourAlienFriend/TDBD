@@ -33,9 +33,9 @@ public class MAIN extends javax.swing.JFrame {
          BufferedImage edit = null;
          BufferedImage search = null;
         try {
-            alert = ImageIO.read(new File("images/music-industry.png"));
-            edit =ImageIO.read(new File("images/edit-266-64.png"));
-            search=ImageIO.read(new File("images/search-158-64.png"));
+            alert = ImageIO.read(new File("src/images/music-industry.png"));
+            edit =ImageIO.read(new File("src/images/edit-266-64.png"));
+            search=ImageIO.read(new File("src/images/search-158-64.png"));
             
         } catch (IOException ex1) {
             Logger.getLogger(ExceptionDialog.class.getName()).log(Level.SEVERE, null, ex1);

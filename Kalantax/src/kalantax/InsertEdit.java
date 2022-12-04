@@ -29,58 +29,31 @@ public class InsertEdit extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        question = new javax.swing.JButton();
-        Return = new javax.swing.JButton();
         First = new javax.swing.JButton();
         artists = new javax.swing.JButton();
         songs = new javax.swing.JButton();
         soundrecorder = new javax.swing.JButton();
         recordings = new javax.swing.JButton();
-        company = new javax.swing.JLabel();
+        question = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        Return1 = new javax.swing.JButton();
+        mic = new javax.swing.JLabel();
+        engineer = new javax.swing.JLabel();
         Artist = new javax.swing.JLabel();
         song = new javax.swing.JLabel();
-        engineer = new javax.swing.JLabel();
-        mic = new javax.swing.JLabel();
+        company = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Kalantax-MainMenu");
-        setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         jLabel2.setForeground(java.awt.Color.cyan);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Select table to edit content");
-
-        question.setBackground(java.awt.Color.darkGray);
-        question.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        question.setForeground(java.awt.Color.magenta);
-        question.setText("Search Database");
-        question.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        question.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                questionActionPerformed(evt);
-            }
-        });
-
-        Return.setBackground(java.awt.Color.darkGray);
-        Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Return.setForeground(java.awt.Color.magenta);
-        Return.setText("Return");
-        Return.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Return.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReturnActionPerformed(evt);
-            }
-        });
+        jLabel2.setText("Select table to edit");
 
         First.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         First.setForeground(java.awt.Color.magenta);
         First.setText("Record Company");
-        First.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        First.setMaximumSize(new java.awt.Dimension(117, 22));
-        First.setMinimumSize(new java.awt.Dimension(117, 22));
-        First.setPreferredSize(new java.awt.Dimension(117, 22));
         First.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FirstActionPerformed(evt);
@@ -90,10 +63,6 @@ public class InsertEdit extends javax.swing.JFrame {
         artists.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         artists.setForeground(java.awt.Color.magenta);
         artists.setText("Artists");
-        artists.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        artists.setMaximumSize(new java.awt.Dimension(117, 22));
-        artists.setMinimumSize(new java.awt.Dimension(117, 22));
-        artists.setPreferredSize(new java.awt.Dimension(117, 22));
         artists.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 artistsActionPerformed(evt);
@@ -103,10 +72,6 @@ public class InsertEdit extends javax.swing.JFrame {
         songs.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         songs.setForeground(java.awt.Color.magenta);
         songs.setText("Songs");
-        songs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        songs.setMaximumSize(new java.awt.Dimension(117, 22));
-        songs.setMinimumSize(new java.awt.Dimension(117, 22));
-        songs.setPreferredSize(new java.awt.Dimension(117, 22));
         songs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 songsActionPerformed(evt);
@@ -116,7 +81,6 @@ public class InsertEdit extends javax.swing.JFrame {
         soundrecorder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         soundrecorder.setForeground(java.awt.Color.magenta);
         soundrecorder.setText("Sound Engineer");
-        soundrecorder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         soundrecorder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 soundrecorderActionPerformed(evt);
@@ -126,161 +90,136 @@ public class InsertEdit extends javax.swing.JFrame {
         recordings.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         recordings.setForeground(java.awt.Color.magenta);
         recordings.setText("Sound Recordings");
-        recordings.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        recordings.setMaximumSize(new java.awt.Dimension(117, 22));
-        recordings.setMinimumSize(new java.awt.Dimension(117, 22));
-        recordings.setPreferredSize(new java.awt.Dimension(117, 22));
         recordings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recordingsActionPerformed(evt);
             }
         });
 
-        company.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/company-construction-32.png"))); // NOI18N
-        company.setText("jLabel1");
-        company.setMaximumSize(new java.awt.Dimension(32, 32));
-        company.setMinimumSize(new java.awt.Dimension(32, 32));
-        company.setPreferredSize(new java.awt.Dimension(32, 32));
+        question.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        question.setForeground(java.awt.Color.magenta);
+        question.setText("Search Database");
+        question.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                questionActionPerformed(evt);
+            }
+        });
 
-        Artist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/music-276-32.png"))); // NOI18N
-        Artist.setText("jLabel1");
-        Artist.setMaximumSize(new java.awt.Dimension(32, 32));
-        Artist.setMinimumSize(new java.awt.Dimension(32, 32));
-        Artist.setPreferredSize(new java.awt.Dimension(32, 32));
+        Return1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return1.setForeground(java.awt.Color.magenta);
+        Return1.setText("Return");
+        Return1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Return1ActionPerformed(evt);
+            }
+        });
 
-        song.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/guitar-25-32.png"))); // NOI18N
-        song.setText("jLabel1");
-        song.setMaximumSize(new java.awt.Dimension(32, 32));
-        song.setMinimumSize(new java.awt.Dimension(32, 32));
-        song.setPreferredSize(new java.awt.Dimension(32, 32));
+        mic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/microphone-154-32.png"))); // NOI18N
+        mic.setText("jLabel1");
+        mic.setMaximumSize(new java.awt.Dimension(32, 32));
+        mic.setMinimumSize(new java.awt.Dimension(32, 32));
+        mic.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        engineer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/responsible-person-selection-32.png"))); // NOI18N
+        engineer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/responsible-person-selection-32.png"))); // NOI18N
         engineer.setText("jLabel1");
         engineer.setMaximumSize(new java.awt.Dimension(32, 32));
         engineer.setMinimumSize(new java.awt.Dimension(32, 32));
         engineer.setPreferredSize(new java.awt.Dimension(32, 32));
 
-        mic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kalantax/images/microphone-154-32.png"))); // NOI18N
-        mic.setText("jLabel1");
-        mic.setMaximumSize(new java.awt.Dimension(32, 32));
-        mic.setMinimumSize(new java.awt.Dimension(32, 32));
-        mic.setPreferredSize(new java.awt.Dimension(32, 32));
+        Artist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/music-276-32.png"))); // NOI18N
+        Artist.setText("jLabel1");
+        Artist.setMaximumSize(new java.awt.Dimension(32, 32));
+        Artist.setMinimumSize(new java.awt.Dimension(32, 32));
+        Artist.setPreferredSize(new java.awt.Dimension(32, 32));
+
+        song.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guitar-25-32.png"))); // NOI18N
+        song.setText("jLabel1");
+        song.setMaximumSize(new java.awt.Dimension(32, 32));
+        song.setMinimumSize(new java.awt.Dimension(32, 32));
+        song.setPreferredSize(new java.awt.Dimension(32, 32));
+
+        company.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/company-construction-32.png"))); // NOI18N
+        company.setText("jLabel1");
+        company.setMaximumSize(new java.awt.Dimension(32, 32));
+        company.setMinimumSize(new java.awt.Dimension(32, 32));
+        company.setPreferredSize(new java.awt.Dimension(32, 32));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(253, Short.MAX_VALUE)
-                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(139, 139, 139))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(question)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Return))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(recordings, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(soundrecorder, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(songs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(First, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(artists, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(0, 84, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(recordings, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(soundrecorder, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(songs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(First, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(artists, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(company, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(mic, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(engineer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(song, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Artist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 84, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(question)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Return1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(First, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(company, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(artists, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(song, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(songs, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Artist, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(soundrecorder, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(engineer, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(recordings, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mic, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGap(46, 46, 46)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(question)
-                    .addComponent(Return))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(First, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(artists, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(songs, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(soundrecorder, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(recordings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(company, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(song, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Artist, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(engineer, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(mic, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Return1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(10, 10, 10))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void FirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Disco disco = new Disco();
-        disco.setVisible(true);
-    }//GEN-LAST:event_FirstActionPerformed
-
-    private void artistsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artistsActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Artists artists = new Artists();
-        artists.setVisible(true);
-    }//GEN-LAST:event_artistsActionPerformed
-
-    private void songsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_songsActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Songs songs = new Songs();
-        songs.setVisible(true);
-    }//GEN-LAST:event_songsActionPerformed
-
-    private void soundrecorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soundrecorderActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        SoundEngineer se = new SoundEngineer();
-        se.setVisible(true);
-    }//GEN-LAST:event_soundrecorderActionPerformed
-
-    private void recordingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recordingsActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Recordings recordings = new Recordings();
-        recordings.setVisible(true);
-    }//GEN-LAST:event_recordingsActionPerformed
-
-    private void questionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Questions questions = new Questions();
-        questions.setVisible(true);
-    }//GEN-LAST:event_questionActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
@@ -289,11 +228,60 @@ public class InsertEdit extends javax.swing.JFrame {
         menu.setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 
+    private void questionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Questions questions = new Questions();
+        questions.setVisible(true);
+    }//GEN-LAST:event_questionActionPerformed
+
+    private void recordingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recordingsActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Recordings recordings = new Recordings();
+        recordings.setVisible(true);
+    }//GEN-LAST:event_recordingsActionPerformed
+
+    private void soundrecorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soundrecorderActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        SoundEngineer se = new SoundEngineer();
+        se.setVisible(true);
+    }//GEN-LAST:event_soundrecorderActionPerformed
+
+    private void songsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_songsActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Songs songs = new Songs();
+        songs.setVisible(true);
+    }//GEN-LAST:event_songsActionPerformed
+
+    private void artistsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artistsActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Artists artists = new Artists();
+        artists.setVisible(true);
+    }//GEN-LAST:event_artistsActionPerformed
+
+    private void FirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Disco disco = new Disco();
+        disco.setVisible(true);
+    }//GEN-LAST:event_FirstActionPerformed
+
+    private void Return1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        MAIN menu = new MAIN();
+        menu.setVisible(true);
+    }//GEN-LAST:event_Return1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Artist;
     private javax.swing.JButton First;
-    private javax.swing.JButton Return;
+    private javax.swing.JButton Return1;
     private javax.swing.JButton artists;
     private javax.swing.JLabel company;
     private javax.swing.JLabel engineer;
