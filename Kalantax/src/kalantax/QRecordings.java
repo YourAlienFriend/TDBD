@@ -84,7 +84,7 @@ public class QRecordings extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Find the song with one of these halls");
+        jLabel1.setText("Search recordings by the hall it was recorded");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 153, 255));
@@ -170,7 +170,7 @@ public class QRecordings extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(java.awt.Color.cyan);
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Find the recording with one of these sound engineers");
+        jLabel5.setText("Search recordings by their responsible sound engineers");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 153, 255));
@@ -224,7 +224,7 @@ public class QRecordings extends javax.swing.JFrame {
                         .addGap(16, 16, 16))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -254,7 +254,7 @@ public class QRecordings extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(java.awt.Color.cyan);
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Find the recording with one of these songs");
+        jLabel7.setText("Find the recordings by song recorded");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(153, 153, 255));
@@ -338,7 +338,7 @@ public class QRecordings extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(java.awt.Color.cyan);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Find the recording with one of these dates");
+        jLabel2.setText("Search recordings by date");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 153, 255));

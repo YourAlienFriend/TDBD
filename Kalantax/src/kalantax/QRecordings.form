@@ -118,7 +118,7 @@
                   <Color blue="ff" green="ff" id="cyan" palette="1" red="0" type="palette"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Find the song with one of these halls"/>
+                <Property name="text" type="java.lang.String" value="Search recordings by the hall it was recorded"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -224,7 +224,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel5" pref="376" max="32767" attributes="0"/>
+                              <Component id="jLabel5" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -268,7 +268,7 @@
                   <Color blue="ff" green="ff" id="cyan" palette="1" red="0" type="palette"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Find the recording with one of these sound engineers"/>
+                <Property name="text" type="java.lang.String" value="Search recordings by their responsible sound engineers"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -402,7 +402,7 @@
                   <Color blue="ff" green="ff" id="cyan" palette="1" red="0" type="palette"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Find the recording with one of these songs"/>
+                <Property name="text" type="java.lang.String" value="Find the recordings by song recorded"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
@@ -536,7 +536,7 @@
                   <Color blue="ff" green="ff" id="cyan" palette="1" red="0" type="palette"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Find the recording with one of these dates"/>
+                <Property name="text" type="java.lang.String" value="Search recordings by date"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">

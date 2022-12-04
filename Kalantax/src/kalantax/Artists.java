@@ -123,8 +123,15 @@ public class Artists extends javax.swing.JFrame {
         IDspinner2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IDspinner2.setFocusCycleRoot(true);
 
+        jScrollPane1.setBackground(getBackground());
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setEnabled(false);
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.setRequestFocusEnabled(false);
 
+        results.setBackground(getBackground());
         results.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -136,6 +143,10 @@ public class Artists extends javax.swing.JFrame {
 
             }
         ));
+        results.setEnabled(false);
+        results.setGridColor(getBackground());
+        results.setOpaque(false);
+        results.setShowHorizontalLines(true);
         jScrollPane1.setViewportView(results);
 
         log.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -164,7 +175,7 @@ public class Artists extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(solobandBox, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329, Short.MAX_VALUE)
                                 .addComponent(insert))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -185,15 +196,13 @@ public class Artists extends javax.swing.JFrame {
                                 .addComponent(Return))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(id3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(delete))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE))))
+                                .addComponent(id3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(IDspinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(delete)))
                         .addContainerGap())))
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

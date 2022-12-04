@@ -69,25 +69,32 @@ public class Recordings extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert a recording");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 255));
         jLabel2.setText("ID");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("ID S.E.");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("ID Song");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(153, 153, 255));
         jLabel5.setText("Date");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 255));
         jLabel6.setText("Hall");
 
         Insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Insert.setForeground(java.awt.Color.magenta);
         Insert.setText("Insert/Edit");
         Insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,13 +103,16 @@ public class Recordings extends javax.swing.JFrame {
         });
 
         jLabel19.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel19.setForeground(java.awt.Color.cyan);
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Delete a recording");
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(153, 153, 255));
         jLabel20.setText("ID");
 
         delete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        delete.setForeground(java.awt.Color.magenta);
         delete.setText("Delete");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,8 +120,8 @@ public class Recordings extends javax.swing.JFrame {
             }
         });
 
-        Return.setBackground(new java.awt.Color(153, 255, 255));
         Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return.setForeground(java.awt.Color.magenta);
         Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,8 +167,8 @@ public class Recordings extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(results);
 
-        log.setBackground(new java.awt.Color(153, 255, 255));
         log.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        log.setForeground(java.awt.Color.magenta);
         log.setText("Show log");
         log.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

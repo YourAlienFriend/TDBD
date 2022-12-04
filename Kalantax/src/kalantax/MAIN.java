@@ -30,16 +30,31 @@ public class MAIN extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
          BufferedImage alert = null;
+         BufferedImage edit = null;
+         BufferedImage search = null;
         try {
-            alert = ImageIO.read(new File("src/kalantax/images/music-industry.png"));
+            alert = ImageIO.read(new File("images/music-industry.png"));
+            edit =ImageIO.read(new File("images/edit-266-64.png"));
+            search=ImageIO.read(new File("images/search-158-64.png"));
+            
         } catch (IOException ex1) {
             Logger.getLogger(ExceptionDialog.class.getName()).log(Level.SEVERE, null, ex1);
         }
         Image dimg = alert.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
         Image.SCALE_SMOOTH);
         
+        Image dimg2 = search.getScaledInstance(sicon.getWidth(), sicon.getHeight(),
+        Image.SCALE_SMOOTH);
+        Image dimg3 = edit.getScaledInstance(eicon.getWidth(), eicon.getHeight(),
+        Image.SCALE_SMOOTH);
+        
+        
         ImageIcon imageIcon = new ImageIcon(dimg);
+        ImageIcon imageIcon2 = new ImageIcon(dimg2);
+        ImageIcon imageIcon3 = new ImageIcon(dimg3);
         jLabel1.setIcon(imageIcon);
+        eicon.setIcon(imageIcon3);
+        sicon.setIcon(imageIcon2);
         this.setTitle("Kalantax");
         
     }
@@ -77,11 +92,13 @@ public class MAIN extends javax.swing.JFrame {
         question = new javax.swing.JButton();
         edit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        eicon = new javax.swing.JLabel();
+        sicon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Welcome.setForeground(new java.awt.Color(0, 204, 204));
-        Welcome.setText("<Html><H1>Welcome to Kalantax for Music producer's</H1>"
+        Welcome.setText("<Html><H1>Welcome to Kalantax for Music producers</H1>"
             + "<br></br><p> store edit and retrieve your data easily</p> </Html>");
 
         question.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -109,29 +126,43 @@ public class MAIN extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(question)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sicon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(edit, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(eicon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(6, 6, 6))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 23, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(Welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(edit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(question)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(edit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(eicon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(sicon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -159,7 +190,9 @@ public class MAIN extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Welcome;
     private javax.swing.JButton edit;
+    private javax.swing.JLabel eicon;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton question;
+    private javax.swing.JLabel sicon;
     // End of variables declaration//GEN-END:variables
 }

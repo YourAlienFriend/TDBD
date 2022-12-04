@@ -54,16 +54,20 @@ public class SoundEngineer extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert the details of a sound engineer");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 255));
         jLabel2.setText("ID");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("Name");
 
         age.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        age.setForeground(new java.awt.Color(153, 153, 255));
         age.setText("Phone");
 
         AddressIn.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +77,7 @@ public class SoundEngineer extends javax.swing.JFrame {
         });
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        insert.setForeground(java.awt.Color.magenta);
         insert.setText("Insert/Edit");
         insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,13 +86,16 @@ public class SoundEngineer extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel9.setForeground(java.awt.Color.cyan);
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Delete an element of the table");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(153, 153, 255));
         jLabel10.setText("ID");
 
         delete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        delete.setForeground(java.awt.Color.magenta);
         delete.setText("Delete");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,8 +103,8 @@ public class SoundEngineer extends javax.swing.JFrame {
             }
         });
 
-        Return.setBackground(new java.awt.Color(153, 255, 255));
         Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return.setForeground(java.awt.Color.magenta);
         Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +113,7 @@ public class SoundEngineer extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("Address");
 
         PhoneIn.addActionListener(new java.awt.event.ActionListener() {
@@ -136,8 +145,8 @@ public class SoundEngineer extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(results);
 
-        log.setBackground(new java.awt.Color(153, 255, 255));
         log.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        log.setForeground(java.awt.Color.magenta);
         log.setText("Show log");
         log.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

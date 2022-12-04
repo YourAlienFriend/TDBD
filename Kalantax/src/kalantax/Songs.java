@@ -54,19 +54,24 @@ public class Songs extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.cyan);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Insert the details of a song");
 
         id.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        id.setForeground(new java.awt.Color(153, 153, 255));
         id.setText("ID");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("ID Artist");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("Title");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(153, 153, 255));
         jLabel5.setText("Genre");
 
         TitleIn.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +81,7 @@ public class Songs extends javax.swing.JFrame {
         });
 
         insert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        insert.setForeground(java.awt.Color.magenta);
         insert.setText("Insert/Edit");
         insert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,13 +90,16 @@ public class Songs extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel9.setForeground(java.awt.Color.cyan);
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Delete an element of the table");
 
         id3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        id3.setForeground(new java.awt.Color(153, 153, 255));
         id3.setText("ID");
 
         delete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        delete.setForeground(java.awt.Color.magenta);
         delete.setText("Delete");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,8 +107,8 @@ public class Songs extends javax.swing.JFrame {
             }
         });
 
-        Return.setBackground(new java.awt.Color(153, 255, 255));
         Return.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Return.setForeground(java.awt.Color.magenta);
         Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +116,7 @@ public class Songs extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setForeground(java.awt.Color.magenta);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pop", "rock" }));
         jComboBox1.setToolTipText("");
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -120,6 +130,7 @@ public class Songs extends javax.swing.JFrame {
         IDspinner2.setFocusCycleRoot(true);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 255));
         jLabel6.setText("Album");
 
         jScrollPane1.setEnabled(false);
@@ -140,6 +151,7 @@ public class Songs extends javax.swing.JFrame {
         jScrollPane1.setViewportView(results);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(153, 153, 255));
         jLabel7.setText("ID Disco");
 
         AIDspinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
@@ -150,8 +162,8 @@ public class Songs extends javax.swing.JFrame {
         DIDspinner.setToolTipText("");
         DIDspinner.setFocusCycleRoot(true);
 
-        log.setBackground(new java.awt.Color(153, 255, 255));
         log.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        log.setForeground(java.awt.Color.magenta);
         log.setText("Show log");
         log.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

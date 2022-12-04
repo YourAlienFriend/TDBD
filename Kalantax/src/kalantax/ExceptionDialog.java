@@ -41,6 +41,7 @@ public class ExceptionDialog extends javax.swing.JDialog {
         ImageIcon imageIcon = new ImageIcon(dimg);
         jLabel1.setIcon(imageIcon);
         jTextField1.setText(Message);
+        this.setTitle("Oracle Database Error");
         
     }
 
@@ -66,10 +67,9 @@ public class ExceptionDialog extends javax.swing.JDialog {
             }
         });
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTextField1.setText("jLabel1");
         jTextField1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
