@@ -117,7 +117,7 @@ public class Songs extends javax.swing.JFrame {
         });
 
         jComboBox1.setForeground(java.awt.Color.magenta);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pop", "rock" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pop", "rock", "indie", "hip-hop", "metal", "punk", "techno", "greek folk", "R&B", "House", "Jazz", "Blues", "Reggae" }));
         jComboBox1.setToolTipText("");
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
