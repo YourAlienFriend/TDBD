@@ -31,7 +31,7 @@ public class ExceptionDialog extends javax.swing.JDialog {
         
         BufferedImage alert = null;
         try {
-            alert = ImageIO.read(new File("src/kalantax/images/AlertImage.gif"));
+            alert = ImageIO.read(new File("src/images/AlertImage.gif"));
         } catch (IOException ex1) {
             Logger.getLogger(ExceptionDialog.class.getName()).log(Level.SEVERE, null, ex1);
         }
